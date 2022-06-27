@@ -1,5 +1,4 @@
 import csv
-import os
 
 
 def validate_csv_file(expected_cols, expected_digits, csv_path):
@@ -12,19 +11,29 @@ def validate_csv_file(expected_cols, expected_digits, csv_path):
         for row in csv_reader:
             #print('\t',row)
             row_count+=1
+
+            # Check if we have the expectd number of columns in this row
             if len(row) != expected_cols:
                 print('\tRow',row_count,'has',len(row),'columns:',row,'(expected: ',expected_cols,')')
                 valid = False
+
+            # Check format
             if valid == True:
                 col_count = 0
                 for col in row:
                     col_count += 1
+
+                    # Check for number of digits
                     if len(col) != expected_digits:
                         print('\tRow',row_count,'column',col_count, 'has ',len(col),'digits:',col,'(expected: ',expected_digits,')')
                         valid = False
+
+                    # Check is numeric    
                     if not col.isnumeric():
                         print('\tRow',row_count,'column',col_count, 'contains non-numeric characters:',row)
                         valid = False
+
+    # If row_count is 0, it was empty
     if row_count == 0:
         valid = False
         print('\tInvalid: no rows')
