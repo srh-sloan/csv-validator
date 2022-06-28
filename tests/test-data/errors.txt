@@ -1,0 +1,15 @@
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/1/5.csv
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/1/6.csv
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/1/7.csv
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/2/7.csv
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/2/6.csv
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/2/8.csv
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/2/9.csv
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/3/10.csv
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/3/11.csv
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/3/12.csv
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/3/14.csv
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/4/2/14.csv
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/4/3/some-multi-column.csv
+	Row 4 has 2 columns:['132412341324', '132412341324'] (expected: 1)
+	Row 6 has 2 columns:['132412341324', '132412341324'] (expected: 1)

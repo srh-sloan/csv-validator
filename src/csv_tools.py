@@ -10,11 +10,12 @@ class Csv_Validator:
         self.total_rows = 0
         self.expected_cols = expected_cols
         self.expected_digits = expected_digits
+        self.any_errors = False
         
 
     def validate_csv_file(self, csv_path):
-        self.errors.append(f"validating csv at {csv_path}")
-        self.output.append(f"validating csv at {csv_path}")
+        self.errors.append(f"validating csv at {csv_path.path}")
+        self.output.append(f"validating csv at {csv_path.path}")
         valid = True
         
         with open(csv_path) as csv_file:
@@ -49,16 +50,28 @@ class Csv_Validator:
         if row_count == 0:
             valid = False
             self.errors.append(f"\tInvalid: no rows")
-        self.output.append(f"CSV at {csv_path} was valid: {valid} \n")
+        self.output.append(f"\t{csv_path.name} was valid: {valid}, rows: {row_count} \n")
         self.total_rows += row_count
+        if not valid:
+            self.any_errors = True
         return valid
 
-    def print_results(self):
+    def print_results(self, output_folder):
         print('\nERRORS\n')
         print(self.errors)
         print('\n\nOutput\n')
         print(self.output)
         print('\n\nTotal Rows:',self.total_rows)
+
+        if output_folder:
+            with open(output_folder + "/output.txt", 'w') as out_file:
+                for line in self.output:
+                    out_file.write(line + "\n")
+                out_file.write(f"\n\nTotal Rows: {self.total_rows}")
+                out_file.write(f"\nAny errors? {self.any_errors}")
+            with open(output_folder + "/errors.txt", 'w') as out_file:
+                for line in self.errors:
+                    out_file.write(line + "\n")
 
 
     def validate_in_folder(self, csv_path):
@@ -82,4 +95,4 @@ class Csv_Validator:
                                         if entry3.is_file() and entry3.name.endswith(".csv"):
                                             print("\t\tis a csv")
                                             self.validate_csv_file(entry3)
-        self.print_results()
+        self.print_results(root_dir)

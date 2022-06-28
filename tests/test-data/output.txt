@@ -1,0 +1,43 @@
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/1/5.csv
+	5.csv was valid: True, rows: 10 
+
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/1/6.csv
+	6.csv was valid: True, rows: 30 
+
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/1/7.csv
+	7.csv was valid: True, rows: 6 
+
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/2/7.csv
+	7.csv was valid: True, rows: 60 
+
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/2/6.csv
+	6.csv was valid: True, rows: 30 
+
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/2/8.csv
+	8.csv was valid: True, rows: 16 
+
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/2/9.csv
+	9.csv was valid: True, rows: 30 
+
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/3/10.csv
+	10.csv was valid: True, rows: 20 
+
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/3/11.csv
+	11.csv was valid: True, rows: 24 
+
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/3/12.csv
+	12.csv was valid: True, rows: 10 
+
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/3/3/14.csv
+	14.csv was valid: True, rows: 6 
+
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/4/2/14.csv
+	14.csv was valid: True, rows: 10 
+
+validating csv at /home/srhsloan/test-workspace/csv-validator/tests/test-data/4/3/some-multi-column.csv
+	some-multi-column.csv was valid: False, rows: 7 
+
+
+
+Total Rows: 259
+Any errors? True
