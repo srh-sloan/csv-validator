@@ -1,4 +1,5 @@
 import csv
+import os
 
 class Csv_Validator:
 
@@ -64,3 +65,21 @@ class Csv_Validator:
         valid = self.validate_csv_file(csv_path)
         self.print_results
         return valid
+
+
+    def find_files_in_dir(self,root_dir):
+        with os.scandir(root_dir) as iter:
+            for entry in iter:
+                print(entry)
+                if entry.is_dir():
+                    with os.scandir(entry) as iter2:
+                        for entry2 in iter2:
+                            print("\t",entry2)
+                            if entry2.is_dir():
+                                with os.scandir(entry2) as iter3:
+                                    for entry3 in iter3:
+                                        print("\t\t",entry3)
+                                        if entry3.is_file() and entry3.name.endswith(".csv"):
+                                            print("\t\tis a csv")
+                                            self.validate_csv_file(entry3)
+        self.print_results()
